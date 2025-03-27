@@ -33,19 +33,65 @@
                 loop: true,
             });
 
+            //푸터에 있는 버튼 클릭
+            //.btn을 클릭햇을 때 실행
+            //.family_site ul한테 클래스명 추가/삭제 toggle('active')
+            let btn = document.querySelector('.family_site .btn');
+            let familysite = document.querySelector('.family_site ul');
+
+            btn.addEventListener('click', () => {
+                //alert('')
+                familysite.classList.toggle('active');
+            });//click()
+
+            //헤더 스크롤시
+            //header 배경색이 변함
             let header = document.querySelector('.header');
             let headerLogo = document.querySelector('.logo img');
 
+            let footer = document.querySelector('.footer');
+            let footerTop = footer.offsetTop;
+
+            let windowHeight = window.innerHeight;
+            let topBtn = document.querySelector('.top_btn');
+
+            let section01 = document.querySelector('.section-01');
+            let sectionHeight = section01.offsetTop;
+
             window.addEventListener('scroll', () => {
                 let scrollTop = window.scrollY;
-                if(scrollTop > 0) {
+
+                //console.log(footerTop)
+                console.log(windowHeight + scrollTop)
+                console.log(sectionHeight);
+
+                if (scrollTop > 0) {
                     headerLogo.src = 'img/logo.svg';
                     header.classList.add('active');
                 } else {
                     headerLogo.src = 'img/logo_wh.svg';
                     header.classList.remove('active');
                 }
+
+                //section-01지날 때 나타나기
+                if(windowHeight + scrollTop >= windowHeight + sectionHeight) {
+                    topBtn.classList.add('show');
+                } else {
+                    topBtn.classList.remove('show');
+                }
+
+                //탑버튼 푸터 위에 고정 시키기
+                if (windowHeight + scrollTop >= footerTop) {
+                    //alert()
+                    topBtn.classList.add('active');
+                }   else {
+                    topBtn.classList.remove('active');
+                }
+
+
             });//scroll()
+
+
         };// script end
     </script>
 </head>
@@ -549,9 +595,206 @@
             </section><!-- .section-04 end -->
 
 
+            <section class="section section-05">
 
+                <div class="title">
+                    <h3>즐거운과 함께하는 판매처 및 기업고객</h3>
+                </div><!-- .title end -->
+
+                <div class="marquee-container">
+                    <div class="marquee marquee--forwards">
+                        <span><img src="img/glogo1.webp" alt="Logo 1"></span>
+                        <span><img src="img/glogo2.webp" alt="Logo 2"></span>
+                        <span><img src="img/glogo3.webp" alt="Logo 3"></span>
+                        <span><img src="img/glogo4.webp" alt="Logo 4"></span>
+                        <span><img src="img/glogo5.webp" alt="Logo 5"></span>
+                        <span><img src="img/glogo6.webp" alt="Logo 6"></span>
+                        <span><img src="img/glogo7.webp" alt="Logo 7"></span>
+                        <span><img src="img/glogo8.webp" alt="Logo 8"></span>
+                        <span><img src="img/glogo9.webp" alt="Logo 9"></span>
+                        <span><img src="img/glogo10.webp" alt="Logo 10"></span>
+                        <span><img src="img/glogo11.webp" alt="Logo 11"></span>
+                        <span><img src="img/glogo12.webp" alt="Logo 12"></span>
+                        <span><img src="img/glogo13.webp" alt="Logo 13"></span>
+                        <span><img src="img/glogo14.webp" alt="Logo 14"></span>
+                        <span><img src="img/glogo15.webp" alt="Logo 15"></span>
+                        <span><img src="img/glogo16.webp" alt="Logo 16"></span>
+                        <span><img src="img/glogo17.webp" alt="Logo 17"></span>
+                        <span><img src="img/glogo18.webp" alt="Logo 18"></span>
+                        <span><img src="img/glogo19.webp" alt="Logo 19"></span>
+                        <span><img src="img/glogo20.webp" alt="Logo 20"></span>
+                        <span><img src="img/glogo1.webp" alt="Logo 1"></span>
+                        <span><img src="img/glogo2.webp" alt="Logo 2"></span>
+                        <span><img src="img/glogo3.webp" alt="Logo 3"></span>
+                        <span><img src="img/glogo4.webp" alt="Logo 4"></span>
+                        <span><img src="img/glogo5.webp" alt="Logo 5"></span>
+                        <span><img src="img/glogo6.webp" alt="Logo 6"></span>
+                        <span><img src="img/glogo7.webp" alt="Logo 7"></span>
+                        <span><img src="img/glogo8.webp" alt="Logo 8"></span>
+                        <span><img src="img/glogo9.webp" alt="Logo 9"></span>
+                        <span><img src="img/glogo10.webp" alt="Logo 10"></span>
+                        <span><img src="img/glogo11.webp" alt="Logo 11"></span>
+                        <span><img src="img/glogo12.webp" alt="Logo 12"></span>
+                        <span><img src="img/glogo13.webp" alt="Logo 13"></span>
+                        <span><img src="img/glogo14.webp" alt="Logo 14"></span>
+                        <span><img src="img/glogo15.webp" alt="Logo 15"></span>
+                        <span><img src="img/glogo16.webp" alt="Logo 16"></span>
+                        <span><img src="img/glogo17.webp" alt="Logo 17"></span>
+                        <span><img src="img/glogo18.webp" alt="Logo 18"></span>
+                        <span><img src="img/glogo19.webp" alt="Logo 19"></span>
+                        <span><img src="img/glogo20.webp" alt="Logo 20"></span>
+                    </div>
+                    <div class="marquee marquee--backwards">
+                        <span><img src="img/glogo21.webp" alt="Logo 21"></span>
+                        <span><img src="img/glogo22.webp" alt="Logo 22"></span>
+                        <span><img src="img/glogo23.webp" alt="Logo 23"></span>
+                        <span><img src="img/glogo24.webp" alt="Logo 24"></span>
+                        <span><img src="img/glogo25.webp" alt="Logo 25"></span>
+                        <span><img src="img/glogo26.webp" alt="Logo 26"></span>
+                        <span><img src="img/glogo27.webp" alt="Logo 27"></span>
+                        <span><img src="img/glogo28.webp" alt="Logo 28"></span>
+                        <span><img src="img/glogo29.webp" alt="Logo 29"></span>
+                        <span><img src="img/glogo30.webp" alt="Logo 30"></span>
+                        <span><img src="img/glogo31.webp" alt="Logo 31"></span>
+                        <span><img src="img/glogo32.webp" alt="Logo 32"></span>
+                        <span><img src="img/glogo34.webp" alt="Logo 34"></span>
+                        <span><img src="img/glogo35.webp" alt="Logo 35"></span>
+                        <span><img src="img/glogo36.webp" alt="Logo 36"></span>
+                        <span><img src="img/glogo37.webp" alt="Logo 37"></span>
+                        <span><img src="img/glogo41.png" alt="Logo 38"></span>
+                        <span><img src="img/glogo39.webp" alt="Logo 39"></span>
+                        <span><img src="img/glogo40.webp" alt="Logo 40"></span>
+                        <span><img src="img/glogo21.webp" alt="Logo 21"></span>
+                        <span><img src="img/glogo22.webp" alt="Logo 22"></span>
+                        <span><img src="img/glogo23.webp" alt="Logo 23"></span>
+                        <span><img src="img/glogo24.webp" alt="Logo 24"></span>
+                        <span><img src="img/glogo25.webp" alt="Logo 25"></span>
+                        <span><img src="img/glogo26.webp" alt="Logo 26"></span>
+                        <span><img src="img/glogo27.webp" alt="Logo 27"></span>
+                        <span><img src="img/glogo28.webp" alt="Logo 28"></span>
+                        <span><img src="img/glogo29.webp" alt="Logo 29"></span>
+                        <span><img src="img/glogo30.webp" alt="Logo 30"></span>
+                        <span><img src="img/glogo31.webp" alt="Logo 31"></span>
+                        <span><img src="img/glogo32.webp" alt="Logo 32"></span>
+                        <span><img src="img/glogo42.png" alt="Logo 33"></span>
+                        <span><img src="img/glogo34.webp" alt="Logo 34"></span>
+                        <span><img src="img/glogo35.webp" alt="Logo 35"></span>
+                        <span><img src="img/glogo36.webp" alt="Logo 36"></span>
+                        <span><img src="img/glogo37.webp" alt="Logo 37"></span>
+                        <span><img src="img/glogo39.webp" alt="Logo 39"></span>
+                        <span><img src="img/glogo40.webp" alt="Logo 40"></span>
+                    </div>
+                </div><!-- .marquee-container end -->
+
+            </section><!-- .section-05 end -->
+
+            <section class="section section-06">
+                <div class="inner">
+
+                    <div class="title">
+                        <h3>즐거운 소식</h3>
+                        <a href="#">더보기+</a>
+                    </div><!-- .title end -->
+
+                    <div class="item_wrap">
+
+                        <div class="item">
+                            <a href="#">
+                                <p>㈜즐거운, 공차코리아와 모바일 상품권 서비스 제휴</p>
+                                <span>2025.01</span>
+                            </a>
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <a href="#">
+                                <p>㈜즐거운, ‘스마일기프트 앱캐시 교환권’ 출시</p>
+                                <span>2025.01</span>
+                            </a>
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <a href="#">
+                                <p>즐거운, 전자금융업 라이선스 취득</p>
+                                <span>2024.12</span>
+                            </a>
+                        </div><!-- .item end -->
+
+                        <div class="item">
+                            <a href="#">
+                                <p>모바일전문기업 ‘즐거운’, iN 자연드림과 모바일상품권 제휴</p>
+                                <span>2024.11</span>
+                            </a>
+                        </div><!-- .item end -->
+
+                    </div><!-- .item_wrap end -->
+
+                </div><!-- .inner end -->
+            </section><!-- .section-06 end -->
 
         </main><!-- .main end -->
+
+        <footer class="footer">
+
+            <div class="top_btn">
+                <a href="#">
+                    <img src="img/top.svg" alt="top">
+                </a>
+            </div><!-- .top_btn end -->
+
+            <div class="ft_nav">
+                <ul>
+                    <li><a href="#">회사소개서 다운로드</a></li>
+                    <li><a href="#">고객지원</a></li>
+                </ul>
+            </div><!-- .ft_nav end -->
+
+            <div class="inner">
+
+                <div class="info_wrap">
+                    <p class="logo">주식회사 즐거운</p>
+
+                    <div class="info_inner">
+                        <ul>
+                            <li>대표자 임관웅</li>
+                            <li>사업자등록번호 104-86-33511</li>
+                            <li>서울특별시 강남구 언주로 709, 6~7층(논현동, 송암빌딩)</li>
+                        </ul>
+
+                        <ul>
+                            <li>대표번호 02-542-0077</li>
+                            <li>business@zlgoon.co.kr</li>
+                            <li>개인정보보호 책임자 강상순</li>
+                        </ul>
+
+                        <ul class="before_none">
+                            <li>고객센터 1661-8191 (09:00-18:00)</li>
+                            <li><a href="#">1:1 문의하기</a></li>
+                        </ul>
+                    </div><!-- .info_inner end -->
+
+                    <div class="ft_menu">
+                        <ul>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">전자금융거래 이용약관</a></li>
+                        </ul>
+                    </div><!-- .ft_menu end -->
+
+                    <p class="copy">COPYRIGHT © ZLGOON. ALL RIGHTS RESERVED.</p>
+                </div><!-- .info_wrap end -->
+
+                <div class="family_site">
+                    <button type="button" class="btn">Family Site</button>
+                    <ul>
+                        <li><a href="#">오피스콘</a></li>
+                        <li><a href="#">스마일기프트</a></li>
+                        <li><a href="#">일상카페</a></li>
+                        <li><a href="#">즐거운 페이먼트</a></li>
+                    </ul>
+                </div><!-- .family_site end -->
+
+            </div><!-- .inner end -->
+
+        </footer><!-- .footer end -->
 
     </div><!-- #wrap end -->
 </body>
