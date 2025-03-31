@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>즐거운</title>
+    <title>클론코딩</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -21,7 +21,7 @@
                 //console.log(scrollbar)
                 if (scrollbar > 0) {
                     header.classList.add('active');
-                    logo.src = 'img/main_logo.svg';
+                    logo.src = 'img/logo.svg';
                 } else {
                     header.classList.remove('active');
                     logo.src = 'img/logo_wh.svg';
@@ -51,10 +51,10 @@
                 loop: true,
 
                 autoplay: {
-                    delay: 0, //2.5s
+                    delay: 0, 
                     disableOnInteraction: false,
                 },
-                speed: 2000,
+                speed: 3000,
             });
         };//scripte end
     </script>
@@ -64,9 +64,9 @@
     <header class="header">
         <div class="inner">
 
-            <div class="logo">
+            <h1 class="logo">
                 <a href="#"><img src="img/logo_wh.svg" alt="즐거운"></a>
-            </div><!-- .logo end -->
+            </h1><!-- .logo end -->
 
             <ul class="nav">
                 <li><a href="#">소개</a></li>
@@ -80,7 +80,7 @@
 
     <div class="main_visual">
         <video src="img/main-visual.mp4" autoplay muted loop></video>
-        <h1>일상의 즐거운 순간들을<br>당신과 함께 만들어갑니다</h1>
+        <h2>일상의 즐거운 순간들을<br>당신과 함께 만들어갑니다</h2>
 
 
         <a href="" class="text_wrap">
@@ -88,7 +88,7 @@
                 <p>[공지] 전자금융업약관 제정 안내</h6>
                     <span>2025.03.18</span>
             </div><!-- .text end -->
-            <img src="img/arrow.svg" alt="">
+            <img src="img/next.svg" alt="">
         </a><!-- .text_wrap end -->
 
     </div><!-- .main_visual end -->
@@ -99,7 +99,8 @@
                 <div class="title">
                     <h3>모바일 쿠폰 전문 기업 1위</h3>
                     <p>모바일 쿠폰 전문 기업 1위인 즐거운은<br>2011년 이래 모바일 쿠폰 사업 경험과 기술력을 바탕으로<br>모바일 쿠폰 사업을 선도하고 있습니다.</p>
-                </div><!-- .text end -->
+                </div><!-- .title end -->
+
                 <div class="image">
                     <img src="img/main1_img1.webp" alt="모바일 쿠폰 전문 기업 1위">
                 </div><!-- .image end -->
@@ -168,39 +169,44 @@
             </div><!-- .swiper end -->
         </section><!-- .section_02 end -->
 
-        <section class="section_03">
-            <div class="text_wrap">
+        <section class="section section_03">
+            <div class="inner">
+                <div class="text_wrap">
+                    <div class="title">
+                        <h3>성장하는 기업과 함께하세요!</h3>
+                        <p>즐거운은 매해 업계 최고 성장률의 역사를 써 내려갑니다. <br>
+                            성장의 이유가 무엇인지 확실히 보여 드립니다.</p>
+                    </div><!-- .title end -->
 
-                <h2>성장하는 기업과 함께하세요!</h2>
-                <h5>즐거운은 매해 업계 최고 성장률의 역사를 써 내려갑니다. <br>성장의 이유가 무엇인지 확실히 보여 드립니다.</h5>
+                    <div class="text">
+                        <div>
+                            <p>모바일 쿠폰 전문 기업</p>
+                            <b>1위</b>
+                        </div><!-- .text end -->
+                        <div>
+                            <p>자산 합계 (2023년 기준)</p>
+                            <b>1,163억+</b>
+                        </div><!-- .text end -->
+                        <div>
+                            <p>연 성장률 (2023년 기준)</p>
+                            <b>140%</b>
+                        </div>
+                    </div><!-- .text end -->
+                </div><!-- .text_wrap end -->
 
-                <div class="text">
-                    <p class="head">모바일 쿠폰 전문 기업</p>
-                    <p class="main">1위</p>
-                </div><!-- .text end -->
-
-                <div class="text">
-                    <p class="head">자산 합계 (2023년 기준)</p>
-                    <p class="main">1,163억+</p>
-                </div><!-- .text end -->
-
-                <div class="text">
-                    <p class="head">연 성장률 (2023년 기준)</p>
-                    <p class="main">140%</p>
-                </div><!-- .text end -->
-
-            </div><!-- .text_wrap end -->
-
-            <div class="image_box">
-                <img src="img/graph.gif" alt="">
-            </div><!-- .image_box end -->
+                <div class="image_box">
+                    <img src="img/graph.gif" alt="">
+                </div><!-- .image_box end -->
+            </div><!-- .inner end -->
         </section><!-- .section_03 end -->
 
-        <section class="section_04">
-            <div class="text">
-                <h2>즐거운과 함께하는<br>모바일 쿠폰 주요 브랜드사</h2>
-                <p>브랜드사는 카카오톡, 오픈마켓, 소셜 커머스 등을 통해<br>매출 증대, 브랜딩, 마케팅 등이 가능하며<br>고객에게 맞춤형 브랜드 선택 폭을 넓혀드립니다.</p>
-            </div><!-- .text end -->
+        <section class="section section_04">
+            <div class="inner">
+                <div class="title">
+                    <h3>즐거운과 함께하는<br>모바일 쿠폰 주요 브랜드사</h3>
+                    <p>브랜드사는 카카오톡, 오픈마켓, 소셜 커머스 등을 통해<br>매출 증대, 브랜딩, 마케팅 등이 가능하며<br>고객에게 맞춤형 브랜드 선택 폭을 넓혀드립니다.</p>
+                </div><!-- .title end -->
+            </div><!-- .inner end -->
 
             <!-- Swiper -->
             <div class="swiper Swiper_04">
@@ -216,7 +222,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image text-white">
                             <img src="img/main_3_card_img2.webp" alt="">
@@ -228,7 +233,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img3.webp" alt="">
@@ -240,7 +244,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img4.webp" alt="">
@@ -252,7 +255,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img5.webp" alt="">
@@ -264,7 +266,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img6.webp" alt="">
@@ -276,7 +277,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img7.webp" alt="">
@@ -288,7 +288,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img8.webp" alt="">
@@ -300,7 +299,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img9.webp" alt="">
@@ -312,7 +310,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img10.webp" alt="">
@@ -324,7 +321,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img11.webp" alt="">
@@ -336,7 +332,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img12.webp" alt="">
@@ -348,7 +343,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img13.webp" alt="">
@@ -360,7 +354,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img14.webp" alt="">
@@ -372,7 +365,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img15.webp" alt="">
@@ -384,7 +376,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img16.webp" alt="">
@@ -396,7 +387,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img17.webp" alt="">
@@ -408,7 +398,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img18.webp" alt="">
@@ -420,7 +409,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img19.webp" alt="">
@@ -432,7 +420,6 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="card-image">
                             <img src="img/main_3_card_img20.webp" alt="">
@@ -444,16 +431,17 @@
                             </span>
                         </div>
                     </div>
-
                 </div><!-- .swiper-wrapper end -->
             </div><!-- .Swiper_o4 end -->
 
         </section><!-- .section_04 end -->
 
-        <section class="section_05">
-            <h2>즐거운과 함께하는 판매처 및 기업고객</h2>
+        <section class="section section_05">
+            <div class="title">
+                <h3>즐거운과 함께하는 판매처 및 기업고객</h3>
+            </div><!-- .title end -->
 
-            <div class="top_image_box">
+            <div class="image_box top_image_box">
                 <span><img src="img/glogo1.webp" alt="Logo 1" style="-webkit-transform: translateZ(0);"></span>
                 <span><img src="img/glogo2.webp" alt="Logo 2" style="-webkit-transform: translateZ(0);"></span>
                 <span><img src="img/glogo3.webp" alt="Logo 3" style="-webkit-transform: translateZ(0);"></span>
@@ -496,7 +484,7 @@
                 <span><img src="img/glogo20.webp" alt="Logo 20"></span>
             </div><!-- .top_image_box end -->
 
-            <div class="bottom_image_box">
+            <div class="image_box bottom_image_box">
                 <span><img src="img/glogo21.webp" alt="Logo 21" style="-webkit-transform: translateZ(0);"></span>
                 <span><img src="img/glogo22.webp" alt="Logo 22" style="-webkit-transform: translateZ(0);"></span>
                 <span><img src="img/glogo23.webp" alt="Logo 23" style="-webkit-transform: translateZ(0);"></span>
@@ -539,10 +527,12 @@
 
         </section><!-- .section_05 end -->
 
-        <section class="section_06">
+        <section class="section section_06">
 
             <div class="Ltext_wrap">
-                <h2>즐거운 소식</h2>
+                <div class="title">
+                    <h3>즐거운 소식</h3>
+                </div><!-- .title end -->
                 <a href="#">더보기+</a>
             </div><!-- .Ltext_wrap end -->
 
