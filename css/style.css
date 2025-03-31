@@ -27,7 +27,7 @@ li {
     padding: 196px 0;
 }
 
-.section .inner {
+.inner {
     padding: 0 65px;
 }
 
@@ -45,7 +45,7 @@ li {
 /* .header */
 .header {
     width: 100%;
-    height: 100px;
+    height: 85px;
     background: none;
     position: absolute;
     top: 0;
@@ -64,7 +64,6 @@ li {
 }
 
 .header .inner {
-    width: 1775px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -72,24 +71,36 @@ li {
     align-items: center;
 }
 
-.header .inner .logo {}
+.header .inner .logo {
+    width: 114px;
+}
 
-.header .inner .logo img {}
+.header .inner .logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 
 .header .inner .nav {
+    height: 100%;
     display: flex;
+    justify-content: right;
     align-items: center;
     font-size: 24px;
 }
 
 .header .inner .nav li {
-    margin: 30px;
-    line-height: 80px;
+    height: 100%;
+    margin: 0 34px;
     font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.8px;
 }
 
 .header .inner .nav li a {
+    height: 100%;
     display: block;
+    align-content: center;
 }
 
 .main_visual {
@@ -103,21 +114,24 @@ li {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.5);
 }
 
-.main_visual h1 {
+.main_visual h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 60px;
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 1.4;
     color: #fff;
     text-align: center;
+    letter-spacing: -2px;
 }
 
 .main_visual .text_wrap {
     width: 100%;
-    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,25 +144,26 @@ li {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0 80px;
+    padding: 24px 81px;
 }
 
 .main_visual .text_wrap .text {
     display: flex;
+    letter-spacing: -1px;
 }
 
 .main_visual .text_wrap .text p {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 22px;
 }
 
 .main_visual .text_wrap .text span {
     color: #767676;
-    margin-left: 15px;
-    font-weight: 500;
+    margin-left: 16px;
 }
 
 .main_visual .text_wrap img {
-    height: 25px;
+    height: 21px;
 }
 
 
@@ -191,12 +206,15 @@ li {
     height: 700px;
     position: relative;
 }
+
 .section_02 .swiper_02 {
     padding-left: 65px;
 }
+
 .section_02 .swiper_02 .title p {
     margin-top: 49px;
 }
+
 .section_02 .swiper-wrapper {
     height: 100%;
 }
@@ -263,79 +281,75 @@ li {
     font-weight: 700;
 }
 
+/* .section_03 */
+.section_03 {}
 
-.section_03 {
-    width: 1775px;
-    margin: 200px auto;
+.section_03 .inner {
     display: flex;
-    justify-content: space-between;
 }
 
 .section_03 .text_wrap {
-    width: 40%;
+    width: 42%;
 }
 
-.section_03 .text_wrap h2 {}
 
-.section_03 .text_wrap h5 {
-    margin-top: 50px;
+.section_03 .text_wrap .title p {
+    margin: 49px 0;
 }
 
 .section_03 .text_wrap .text {
-    margin: 50px 0;
+    margin-top: 81px;
 }
 
-.section_03 .text_wrap .text .head {
+.section_03 .text_wrap .text div {
+    margin-top: 49px;
+}
+
+.section_03 .text_wrap .text p {
     color: #919191;
     font-size: 24px;
     font-weight: 600;
 }
 
-.section_03 .text_wrap .text .main {
-    font-size: 50px;
+.section_03 .text_wrap .text b {
+    font-size: 51px;
     font-weight: 700;
+    line-height: 65px;
 }
 
 .section_03 .image_box {
-    width: 60%;
+    width: 58%;
 }
 
 .section_03 .image_box img {
     width: 100%;
 }
 
-.section_04 {
-    width: 100%;
-    padding-top: 180px;
-}
 
-
-.section_04 .text {
-    width: 1775px;
+/* .section_04 */
+.section_04 .inner .title {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
 }
 
-.section_04 .text h2 {
+.section_04 .title h3 {
     width: 50%;
 }
 
-.section_04 .text p {
+.section_04 .title p {
     width: 50%;
-    font-size: 30px;
     text-align: left;
     padding-left: 50px;
-    line-height: 1.6;
+    letter-spacing: -1.5px;
 }
 
 .section_04 .Swiper_04 {
-    height: 370px;
-    margin-top: 200px;
+    margin-top: 196px;
 }
 
 .section_04 .Swiper_04 .swiper-wrapper {
-    transition: linear;
+    transition-timing-function: linear;
 }
 
 .section_04 .Swiper_04 .swiper-slide {
@@ -343,7 +357,8 @@ li {
 }
 
 .section_04 .Swiper_04 .card-image {
-    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 .section_04 .Swiper_04 .card-image::after {
@@ -359,10 +374,8 @@ li {
 }
 
 .section_04 .Swiper_04 .card-image img {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+    display: block;
 }
 
 .section_04 .Swiper_04 .card-text {
@@ -385,41 +398,45 @@ li {
     border-radius: 100%;
 }
 
-
+/* .section_05 */
 .section_05 {
     width: 100%;
-    height: 850px;
     background-color: #111;
-    margin: 200px 0;
     overflow-x: hidden;
+    padding: 196px 0 130px;
 }
 
-.section_05 h2 {
+.section_05 .title h3 {
     color: #fff;
     text-align: center;
-    padding-top: 200px;
 }
 
 .section_05 .top_image_box {
     width: 100%;
     white-space: nowrap;
-    animation: tslide 35s infinite reverse linear;
+    animation: tslide 50s infinite reverse linear;
     margin-top: 327px;
 }
 
-.section_05 .top_image_box span {
+.section_05 .image_box span {
     width: 155px;
     height: 35px;
     margin: 0 40px;
     display: inline-block;
 }
 
-.section_05 .top_image_box span img {
+.section_05 .image_box span img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
+.section_05 .bottom_image_box {
+    width: 100%;
+    white-space: nowrap;
+    animation: btmslide 50s infinite reverse linear;
+    margin-top: 32px;
+}
 
 @keyframes tslide {
     0% {
@@ -429,26 +446,6 @@ li {
     100% {
         transform: translateX(100%);
     }
-}
-
-.section_05 .bottom_image_box {
-    width: 100%;
-    white-space: nowrap;
-    animation: btmslide 35s infinite reverse linear;
-    margin-top: 32px;
-}
-
-.section_05 .bottom_image_box span {
-    width: 155px;
-    height: 35px;
-    margin: 0 40px;
-    display: inline-block;
-}
-
-.section_05 .bottom_image_box span img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
 }
 
 @keyframes btmslide {
@@ -461,6 +458,10 @@ li {
     }
 }
 
+
+
+
+/* sectuib_06 */
 .section_06 {
     width: 1775px;
     margin: 0 auto;
