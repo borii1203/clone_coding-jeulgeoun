@@ -16,6 +16,9 @@
             let header = document.querySelector('.header');
             let logo = document.querySelector('.header .inner .logo img');
 
+            let ft_btn = document.querySelector('.footer .familySite');
+            let ft_depth02 = document.querySelector('.footer .familySite ul')
+
             window.addEventListener('scroll', () => {
                 let scrollbar = window.scrollY;
                 //console.log(scrollbar)
@@ -26,8 +29,11 @@
                     header.classList.remove('active');
                     logo.src = 'img/logo_wh.svg';
                 }
-
             });//scroll end
+
+            ft_btn.addEventListener('click', () => {
+                ft_depth02.classList.toggle('active');
+            });//click
 
             var swiper = new Swiper(".swiper_02", {
                 slidesPerView: 3.2,
@@ -51,7 +57,7 @@
                 loop: true,
 
                 autoplay: {
-                    delay: 0, 
+                    delay: 0,
                     disableOnInteraction: false,
                 },
                 speed: 3000,
@@ -73,6 +79,7 @@
                 <li><a href="#">사업 · 서비스</a></li>
                 <li><a href="#">뉴스룸</a></li>
                 <li><a href="#">인재채용</a></li>
+                <li><a href="#">고객센터</a></li>
             </ul><!-- .nav end -->
 
         </div><!-- .inner end -->
@@ -110,7 +117,6 @@
         <section class="section section_02">
             <!-- Swiper -->
             <div class="swiper swiper_02">
-
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide title">
@@ -161,12 +167,14 @@
                             <p>통합 모바일 쿠폰 서비스</p>
                         </div><!-- .text end -->
                     </div>
+                    <div class="swiper-slide">
+                    </div>
 
                 </div><!-- .swiper-wrapper end -->
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div><!-- .swiper end -->
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </section><!-- .section_02 end -->
 
         <section class="section section_03">
@@ -571,12 +579,12 @@
 
         <div class="ft_nav">
             <a href="#">회사소개서 다운로드</a>
-            <a href="#">고객지원</a>
+            <a href="#">제휴문의</a>
         </div><!-- .ft_nav end -->
 
         <div class="ft_info">
 
-            <div class="inner">
+            <div class="ft_inner">
                 <span>주식회사 즐거운</span>
                 <div class="top_text">
                     <ul class="text">
@@ -600,7 +608,17 @@
                 </div><!-- .bottom_text end -->
                 <p class="copy">COPYRIGHT © ZLGOON. ALL RIGHTS RESERVED.</p>
             </div><!-- .inner end -->
-            <button type="button">Family Site</button>
+
+            <div class="familySite">
+                <button type="button">Family Site</button>
+
+                <ul>
+                    <li><a href="#">오피스콘</a></li>
+                    <li><a href="#">스마일기프트</a></li>
+                    <li><a href="#">일상카페</a></li>
+                    <li><a href="#">즐거운 페이먼트</a></li>
+                </ul>
+            </div><!-- .familySite end -->
         </div><!-- .ft_info end -->
 
 
