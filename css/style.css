@@ -509,16 +509,33 @@ li {
     bottom: 50px;
     right: 50px;
     width: 65px;
+    z-index: 9;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
 }
 
 .top_button img {
     width: 100%;
 }
 
+.top_button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.top_button.absolute {
+    position: absolute;
+    top: -100px;
+    bottom: auto;
+}
+
 .footer {
     width: 100%;
     background-color: #F5F5F5;
     margin-top: 200px;
+    position: relative;
 }
 
 .footer .ft_nav {
@@ -648,9 +665,11 @@ li {
 .footer button:hover {
     cursor: pointer;
 }
+
 .footer .familySite {
     position: relative;
 }
+
 .footer .familySite ul {
     width: 100%;
     background-color: #fff;
@@ -661,6 +680,7 @@ li {
     top: -203px;
     display: none;
 }
+
 .footer .familySite ul.active {
     display: block;
 }
@@ -672,6 +692,7 @@ li {
     color: #212529;
     transition: 0.15s;
 }
+
 .footer .familySite ul li a:hover {
     background-color: #f8f9fa;
     color: #16181b;

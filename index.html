@@ -16,12 +16,22 @@
             let header = document.querySelector('.header');
             let logo = document.querySelector('.header .inner .logo img');
 
+            let section01 = document.querySelector('.section_01');
+            let section01H = section01.offsetTop;
+
+            let footer = document.querySelector('.footer');
+            let topBtn = document.querySelector('.top_button');
+
             let ft_btn = document.querySelector('.footer .familySite');
             let ft_depth02 = document.querySelector('.footer .familySite ul')
 
             window.addEventListener('scroll', () => {
                 let scrollbar = window.scrollY;
+                let footerH = footer.offsetTop;
+
                 //console.log(scrollbar)
+
+                //스크롤시 헤더 변화
                 if (scrollbar > 0) {
                     header.classList.add('active');
                     logo.src = 'img/logo.svg';
@@ -29,8 +39,25 @@
                     header.classList.remove('active');
                     logo.src = 'img/logo_wh.svg';
                 }
+
+                //탑버튼 나타나기
+                if (scrollbar > section01H) {
+                    topBtn.classList.add('show');
+                } else {
+                    topBtn.classList.remove('show');
+                }
+
+                //탑버튼 고정되기
+                if (scrollbar + window.innerHeight >= footerH) {
+                    topBtn.classList.add('absolute')
+                } else {
+                    topBtn.classList.remove('absolute')
+                }
             });//scroll end
 
+
+
+            //푸터 family site버튼 클릭시 2차 메뉴 등장
             ft_btn.addEventListener('click', () => {
                 ft_depth02.classList.toggle('active');
             });//click
@@ -568,14 +595,13 @@
 
             </div><!-- .Rtext_wrap end -->
         </section><!-- .section_06 end -->
-
-        <div class="top_button">
-            <a href="#"><img src="img/top.svg" alt=""></a>
-        </div><!-- .top_button end -->
     </main><!-- .main end -->
 
 
     <footer class="footer">
+        <div class="top_button">
+            <a href="#"><img src="img/top.svg" alt=""></a>
+        </div><!-- .top_button end -->
 
         <div class="ft_nav">
             <a href="#">회사소개서 다운로드</a>
